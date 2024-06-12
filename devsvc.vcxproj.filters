@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\curve25519">
+      <UniqueIdentifier>{41d27a98-f4a4-41ec-8702-77d0713571da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\mysql">
+      <UniqueIdentifier>{7d5379c5-673f-47f0-a3dd-e6bfaa405df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\pthreads">
+      <UniqueIdentifier>{ccab2930-afee-406c-9e4e-91446beed23c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\jsmn">
+      <UniqueIdentifier>{02101568-e4bb-4b82-91c9-52bf9e2b9538}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="external\curve25519\include\base64.h">
+      <Filter>Заголовочные файлы\curve25519</Filter>
+    </ClInclude>
+    <ClInclude Include="external\curve25519\include\curve25519.h">
+      <Filter>Заголовочные файлы\curve25519</Filter>
+    </ClInclude>
+    <ClInclude Include="external\mysql\include\mysql.h">
+      <Filter>Заголовочные файлы\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="external\pthreads\include\pthread.h">
+      <Filter>Заголовочные файлы\pthreads</Filter>
+    </ClInclude>
+    <ClInclude Include="external\pthreads\include\sched.h">
+      <Filter>Заголовочные файлы\pthreads</Filter>
+    </ClInclude>
+    <ClInclude Include="external\pthreads\include\semaphore.h">
+      <Filter>Заголовочные файлы\pthreads</Filter>
+    </ClInclude>
+    <ClInclude Include="devnetlib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="devtasklib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="devloglib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="devconflib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="devdblib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="devutils.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="external\jsmn\include\jsmn.h">
+      <Filter>Заголовочные файлы\jsmn</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devsvc.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devnetlib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devtasklib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devloglib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devconflib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devdblib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="devutils.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="devsvc.config">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  devconflib.cpp
+  devdblib.cpp
+  devutils.cpp
+  devloglib.cpp
+  devnetlib.cpp
+  devsvc.cpp
+  devtasklib.cpp
+  Создание кода
+  Создание кода завершено
+  devsvc.vcxproj -> D:\!!!\src\devsvc\x64\Release\devsvc.exe
