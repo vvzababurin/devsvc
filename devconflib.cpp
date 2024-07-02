@@ -21,7 +21,7 @@ namespace wm_conflib
 	int create( const wchar_t* filename )
 	{
 		if ( filename ) wcscpy( _filename, filename );
-		else wcscpy( _filename, L"service.conf" );
+		else wcscpy( _filename, L"wm_service.conf" );
 		FILE* f = _wfopen( _filename, L"ab+" );
 		if ( f != 0 ) {
 			fseek( f, 0, SEEK_END );
@@ -68,19 +68,19 @@ namespace wm_conflib
 		wchar_t* wp = buf;
 		do {
 			wchar_t ch = *wp;
-			wp = wm_utils::left_skip( wp, L"\t " );
+			wp = wm_utils::ls_skip( wp, L"\t " );
 			word = L"";
-			wp = wm_utils::left_until( wp, word, L":\r\n" );
+			wp = wm_utils::ls_until( wp, word, L":\r\n" );
 			if ( *wp == '\r' || *wp == '\n' ) {
 				nl = nc;
 				break;
 			}
 			param = word;
-			wp = wm_utils::left_skip( wp, L":\t " );
+			wp = wm_utils::ls_skip( wp, L":\t " );
 			word = L"";
-			wp = wm_utils::left_until( wp, word, L"\r\n" );
+			wp = wm_utils::ls_until( wp, word, L"\r\n" );
 			arg = word;
-			wp = wm_utils::left_skip( wp, L"\r\n" );
+			wp = wm_utils::ls_skip( wp, L"\r\n" );
 			param_config_set( param.c_str(), arg.c_str() );
 			++nc;
 		} while( *wp != 0 );

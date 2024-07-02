@@ -169,36 +169,6 @@ namespace wm_netlib
 		return -1;
 	}
 
-	std::string uuid()
-	{
-#if _WIN32 || _WIN64
-		UUID uuid;
-		UuidCreate( &uuid );
-
-		unsigned char * str;
-		UuidToStringA( &uuid, &str );
-
-		std::string s( (char*)str );
-
-		RpcStringFreeA ( &str );
-#else
-		uuid_t uuid;
-		uuid_generate_random ( uuid );
-		char str[37];
-		uuid_unparse ( uuid, s );
-
-		std::string s( ( char* ) str );
-#endif
-		std::transform( s.begin(), s.end(), s.begin(), [](char c){ return ::tolower(c); } );
-		return s;
-	}
-
-	std::wstring wuuid()
-	{
-		std::string guid = uuid();
-		return std::wstring( guid.begin(), guid.end() );
-	}
-
 	int readn(int s, char** pp, int maxsize, int sec, int usec )
 	{
 		int rr = wm_netlib::wait( s, sec, usec );
@@ -229,6 +199,7 @@ namespace wm_netlib
 		return rr; /*  0 or -1  */
 	}
 
+/*
 	int create_udpsrv()
 	{
 		struct sockaddr_in peer;
@@ -244,8 +215,9 @@ namespace wm_netlib
 			goto out;
 		}
 
-		retrun 0;
+		return 0;
 	}
+*/
 
 	int create_tcpcli( const char* addr, int port )
 	{

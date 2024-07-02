@@ -3,7 +3,7 @@
 #include "devtasklib.h"
 #include "devloglib.h"
 
-#define COUNT_THREADS		    60
+#define COUNT_THREADS		    10
 #define TASK_SLEEP_TIME			50
 
 #define ACTIVE_BUSY				1
@@ -24,14 +24,14 @@ namespace wm_tasklib
 
 	struct paramthread {
 		pthread_t tid;
-		int busy;
+		volatile int busy;
 	};
 
 	paramthread tid[ COUNT_THREADS ];
 
 	void *executethread( void *arg )
 	{
-		int* busy = (int*)arg;
+		volatile int* busy = (int*)arg;
 		while ( *busy ) {
 			ptrcallback ptr = 0;
 			void  (*func)(void*) = 0;
@@ -62,7 +62,7 @@ namespace wm_tasklib
 		for ( int i = 0; i < COUNT_THREADS; i++ ) 
 		{
 			tid[i].busy = ACTIVE_BUSY;
-			int rpc = pthread_create( &tid[i].tid, 0, executethread, &tid[i].busy );
+			int rpc = pthread_create( &tid[i].tid, 0, executethread, (void*)&tid[i].busy );
 			if ( rpc ) {
 				rc = 0xff;
 				wm_loglib::log( LOG_ERROR, L"asyncquery thread failed" );

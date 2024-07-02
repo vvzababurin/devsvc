@@ -6,8 +6,6 @@
   devnetlib.cpp
   devsvc.cpp
   devtasklib.cpp
-  json.cpp
-  json_val.cpp
   Создание кода
   Создание кода завершено
-  devsvc.vcxproj -> D:\!!!\src\devsvc\x64\Debug\devsvc.exe
+  devsvc.vcxproj -> D:\workdir\devsvc\x64\Debug\devsvc.exe

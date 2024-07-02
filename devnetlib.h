@@ -10,7 +10,6 @@
 
 #define FD_SETSIZE				2048
 
-#include <rpc.h>
 #include <winsock.h>
 
 #define SD_RECEIVE				0x00
@@ -28,7 +27,6 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <uuid/uuid.h>
 
 #define WSAEWOULDBLOCK				EWOULDBLOCK
 
@@ -39,7 +37,6 @@
 
 #endif
 
-#include <algorithm>
 #include <string>
 
 #define BUF_SIZ					4096
@@ -57,9 +54,6 @@ namespace wm_netlib
 	int sendn(int s, const char* p, int l);
 
 	int readn(int s, char** pp, int, int, int);
-
-	std::string uuid();
-	std::wstring wuuid();
 
 	int create_tcpcli( const char*, int );
 	int create_tcpsrv( const char*, int, int, int(*)(int,char**), int(*)(int), int(*)(int, const char*, int) );
