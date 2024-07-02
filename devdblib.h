@@ -15,10 +15,10 @@
 
 namespace wm_dblib
 {
-    static std::string dbsqlhost;
-    static std::string dbsqluser;
-    static std::string dbsqlpasswd;
-    static std::string dbsqldb;
+    static std::string db_sqlhost;
+    static std::string db_sqluser;
+    static std::string db_sqlpasswd;
+    static std::string db_sqldb;
 
     ///////////////////////////////////////////////////	
     // typedef int t_db_success;
@@ -26,14 +26,14 @@ namespace wm_dblib
     ///////////////////////////////////////////////////	
 
     enum e_status {
-        t_db_success,
-        t_db_failed
+        db_success = 0,
+        db_failed
     };
 
-    class t_db_value : public std::vector<char> 
+    class db_value : public std::vector<char> 
     {
     public:
-        enum e_db_type 
+        enum db_type 
         {
             integer,
             uinteger,
@@ -48,25 +48,25 @@ namespace wm_dblib
         std::wstring to_wstring();
         void* to_pointer( unsigned int& len );
     
-        t_db_value from_integer( long long val );
-        t_db_value from_uinteger( unsigned long long val );
-        t_db_value from_string( std::string val );
-        t_db_value from_wstring( std::wstring val );
-        t_db_value from_pointer( void* val, unsigned int& len );
+        db_value from_integer( long long val );
+        db_value from_uinteger( unsigned long long val );
+        db_value from_string( std::string val );
+        db_value from_wstring( std::wstring val );
+        db_value from_pointer( void* val, unsigned int& len );
     };
 
-    typedef std::string t_db_field;
-    typedef std::string t_db_table;
+    typedef std::string db_field;
+    typedef std::string db_table;
 
-    typedef std::map<t_db_field, t_db_value> t_db_row;
-    typedef std::vector<t_db_row> t_db_rows;
+    typedef std::map<db_field, db_value> db_row;
+    typedef std::vector<db_row> db_rows;
 
-    int create(const std::string& _dbsqlhost, const std::string& _dbsqluser, const std::string& _dbsqlpasswd, const std::string& _dbsqldb);
+    int create(const std::string& _db_sqlhost, const std::string& _db_sqluser, const std::string& _db_sqlpasswd, const std::string& _db_sqldb);
     void destroy();
 
     int connectdb( MYSQL* conn, const std::string &host, const std::string &db, const std::string &user, const std::string &passwd );
 
-    static e_status updatedb( const t_db_table& dbtable, const t_db_field& dbfield, const t_db_value& dbvalue );
+    static e_status updatedb( const db_table& dbtable, const db_field& dbfield, const db_value& dbvalue );
 }
 
 #if _WIN32 || _WIN64

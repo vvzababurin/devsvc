@@ -29,21 +29,22 @@ db_modules_t modules[] = {
 
 namespace wm_dblib
 {
-    static MYSQL* t_connect = 0;
+    static MYSQL* db_connect = 0;
 
-    int create( const std::string & _dbsqlhost, const std::string & _dbsqluser, const std::string & _dbsqlpasswd, const std::string & _dbsqldb )
+    int create( const std::string & _db_sqlhost, const std::string & _db_sqluser, const std::string & _db_sqlpasswd, const std::string & _db_sqldb )
     {
-        dbsqlhost = _dbsqlhost;
-	    dbsqluser = _dbsqluser;
-	    dbsqlpasswd = _dbsqlpasswd;
-	    dbsqldb = _dbsqldb;
+        db_sqlhost = _db_sqlhost;
+	    db_sqluser = _db_sqluser;
+	    db_sqlpasswd = _db_sqlpasswd;
+	    db_sqldb = _db_sqldb;
 
-	    t_connect = mysql_init( 0 );
-	    if( t_connect == NULL ) {
+	    db_connect = mysql_init( 0 );
+	    if( db_connect == NULL ) {
             wm_loglib::log( LOG_ERROR, L"failed create mysql descriptor" );
-		    return t_db_failed;
+		    return db_failed;
 	    }
-        return t_db_success;
+
+        return db_success;
     }
 
     void destroy()
@@ -56,14 +57,14 @@ namespace wm_dblib
 	    MYSQL* conn = mysql_real_connect( connect, host.c_str(), user.c_str(), passwd.c_str(), db.c_str(), 0, 0, 0 );
 	    if( conn == NULL ) {
             wm_loglib::log( LOG_ERROR, L"failed connect to mysql" );
-		    return t_db_failed;
+		    return db_failed;
 	    }
-        return t_db_success;           
+        return db_success;           
     }
 
-    static e_status update( const t_db_table& dbtable, const t_db_field& dbfield, const t_db_value& dbvalue )
+    static e_status update( const db_table& dbtable, const db_field& dbfield, const db_value& dbvalue )
     {
-        return t_db_failed;
+        return db_failed;
     }
 
 }                  
