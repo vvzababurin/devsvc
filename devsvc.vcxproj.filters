@@ -72,6 +72,9 @@
     <ClInclude Include="external\jsmn\include\jsmn.h">
       <Filter>Заголовочные файлы\jsmn</Filter>
     </ClInclude>
+    <ClInclude Include="devprotolib.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -98,5 +101,13 @@
     <ClCompile Include="devutils.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="devprotolib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="service-devsvc.config">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>

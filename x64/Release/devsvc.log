@@ -1,15 +1,16 @@
-﻿Построение начато 02.07.2024 16:40:13.
+﻿Построение начато 02.07.2024 19:33:12.
      1>Проект "D:\workdir\devsvc\devsvc.vcxproj" в узле 2 (целевые объекты rebuild).
      1>_PrepareForClean:
          Файл "x64\Release\devsvc.lastbuildstate" удаляется.
        InitializeBuildStatus:
-         Обращение к "x64\Release\devsvc.unsuccessfulbuild".
+         Создание "x64\Release\devsvc.unsuccessfulbuild", так как было задано "AlwaysCreate".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D JSMN_STATIC /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHs /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"x64\Release\devsvc.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
          stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D JSMN_STATIC /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHs /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Release\devsvc.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt devconflib.cpp devdblib.cpp devutils.cpp devloglib.cpp devnetlib.cpp devsvc.cpp devtasklib.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D JSMN_STATIC /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHs /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Release\devsvc.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt devconflib.cpp devdblib.cpp devprotolib.cpp devutils.cpp devloglib.cpp devnetlib.cpp devsvc.cpp devtasklib.cpp
          devconflib.cpp
          devdblib.cpp
+         devprotolib.cpp
          devutils.cpp
          devloglib.cpp
          devnetlib.cpp
@@ -18,6 +19,7 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\workdir\devsvc\x64\Release\devsvc.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\devsvc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\workdir\devsvc\x64\Release\devsvc.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\workdir\devsvc\x64\Release\devsvc.lib" /MACHINE:X64 x64\Release\devconflib.obj
          x64\Release\devdblib.obj
+         x64\Release\devprotolib.obj
          x64\Release\devutils.obj
          x64\Release\devloglib.obj
          x64\Release\devnetlib.obj
@@ -36,4 +38,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:01.90
+Затраченное время: 00:00:02.89
