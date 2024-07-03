@@ -106,7 +106,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="service-devsvc.config">
+    <None Include="wm-devsvc.config">
       <Filter>Файлы ресурсов</Filter>
     </None>
   </ItemGroup>
