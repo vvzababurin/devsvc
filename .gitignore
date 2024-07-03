@@ -52,6 +52,10 @@ Mkfile.old
 dkms.conf
 ipch/*
 x64/*
+.vs/*
+.vscode/*
 *.opensdf
 *.sdf
 *.suo
+*.sdf
+
