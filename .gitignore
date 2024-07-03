@@ -50,10 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-ipch/*
-x64/*
-.vs/*
-.vscode/*
+ipch/**
+x64/**
+.vs/**
+.vscode/**
 *.opensdf
 *.sdf
 *.suo
